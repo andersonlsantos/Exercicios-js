@@ -1,0 +1,25 @@
+/*
+    28) ​ Ler um vetor de números inteiros e imprimir quantos são pares e quantos são ímpares.
+*/
+
+const numeros = (...numeros) => {
+    let parImpar
+    numeros.forEach(numeros =>{
+        if(numeros % 2 == 0){
+            console.log(parImpar = `${numeros} é par`)
+        }else{
+            console.log(parImpar = `${numeros} é impar`)
+        }
+    })
+    console.log('-------------------------------------')
+    for(let i = 0; i < numeros.length; i++){
+        if(numeros[i] % 2 == 0){
+            console.log(parImpar = `${numeros[i]} é par`)
+        }else{
+            console.log(parImpar = `${numeros[i]} é impar`)
+        }
+    }
+}
+
+numeros(2, 4, 1, 7, 8, 12, 588, 78, 68, 789, 47, 456, 96, 753, 159, 458 )
+

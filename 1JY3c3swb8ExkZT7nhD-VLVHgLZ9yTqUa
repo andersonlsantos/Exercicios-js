@@ -1,0 +1,31 @@
+
+/*
+    39) ​Crie uma função que receba dois vetores de igual tamanho e troque seus elementos de modo que o
+        primeiro elemento do vetorA passe a ser o primeiro elemento do vetorB e vice versa e assim sucessivamente.
+        Faça a troca sem utilizar uma variável auxiliar.
+*/
+
+const trocaVetor = (callback1, callback2) =>{
+    let func1 = callback1(1, 2, 3, 4, 5, 6, 7)
+    let func2 = callback2(8, 7, 6, 5, 4, 3, 2, 1)
+    let func3 = []
+    let func4 = []
+    for(let i = 0; i < func1.length; i++){
+        func3.push(func1[i])
+    }
+    for(let e = 0; e < func2.length; e++){
+        func4.push(func2[e])
+    }
+    func2.splice(0, func2.length)
+    func1.splice(0, func1.length)
+    for(let f = 0; f < func3.length; f++){
+        func2.push(func3[f])
+    }
+    for(let a = 0; a < func4.length; a++){
+        func1.push(func4[a])
+    }
+    console.log(func1, func2)
+}
+
+trocaVetor((...vetor1) => vetor1, (...vetor2) => vetor2)
+

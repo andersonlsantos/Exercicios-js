@@ -1,0 +1,25 @@
+
+/*
+    40) ​Faça uma função que receba como parâmetro um vetor de notas e mostre os conceitos de cada uma de
+        modo que de 0,0 a 4,9 seja atribuído o conceito D, de 5,0 a 6,9 seja atribuído o conceito C, de 7,0 a 8,9 o
+        conceito B e de 9,0 a 10,0 o conceito A.
+*/
+
+const conceitoDasNotas = (...vetor) => {
+    for(let i = 0; i < vetor.length; i++){
+        if(vetor[i] > 0 && vetor[i] <= 4.9){
+            console.log(`${vetor[i]} esta entre 0,0 e 4,9, tem o conceito D`)
+        }else if(vetor[i] > 4.9 && vetor[i] <= 6.9){
+            console.log(`${vetor[i]} esta entre 5 e 6,9, tem o conceito C`)
+        }else if(vetor[i] > 6.9 && vetor[i] <= 8.9){
+            console.log(`${vetor[i]} esta entre 7 e 8,9, tem o conceito B`)
+        }else if(vetor[i] > 8.9 && vetor[i] <= 10){
+            console.log(`${vetor[i]} esta entre 9 e 10, tem o conceito A`)
+        }else{
+            console.log(`${vetor[i]} esta opção é invalida!!!!`)
+        }
+    }
+}
+
+conceitoDasNotas(98, 4, 7, 10, 1, 75, 11, 0, 5, 15, 6, 45, 9, 8, 3, 12, 147, 2)
+

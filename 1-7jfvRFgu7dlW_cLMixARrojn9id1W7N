@@ -1,0 +1,47 @@
+
+/*
+    Elabore uma função que recebe dois parâmetros: o primeiro é um array de números e o segundo é um número
+    que especifica uma quantidade de dígitos. Essa função deverá retornar somente aqueles números do array que
+    têm a quantidade de dígitos indicada pelo segundo parâmetro.
+    Exemplos:
+    filtrarPorQuantidadeDeDigitos([38, 2, 365, 10, 125, 11], 2) // retornará [38, 10, 11]
+    filtrarPorQuantidadeDeDigitos([5, 9, 1, 125, 11], 1) // retornará [5, 9, 1]
+*/
+
+const filtrarPorQuantidadeDeDigitos = (lista, parOuImpar) => {
+    let novaLista = []
+    for(let i = 0; i < lista.length; i++){
+        if(parOuImpar === 1){
+            if(lista[i] < 10){
+                novaLista.push(lista[i])
+            }
+        }
+        if(parOuImpar === 2){
+            if(lista[i] > 9 && lista[i] < 100){
+                novaLista.push(lista[i])
+            }
+        }
+        if(parOuImpar === 3){
+            if(lista[i] > 99 && lista[i] < 1000){
+                novaLista.push(lista[i])
+            }
+        }
+        if(parOuImpar === 4){
+            if(lista[i] > 999 && lista[i] < 10000){
+                novaLista.push(lista[i])
+            }
+        }
+        if(parOuImpar === 5){
+            if(lista[i] > 9999 && lista[i] < 100000){
+                novaLista.push(lista[i])
+            }
+        }
+    }
+    console.log(novaLista)
+}
+
+
+
+filtrarPorQuantidadeDeDigitos([38, 2, 365, 10, 125, 11], 2)
+filtrarPorQuantidadeDeDigitos([5, 9, 1, 125, 11, 10], 1)
+filtrarPorQuantidadeDeDigitos([1, 2, 3, 15, 85, 45, 100, 112, 147, 1000, 10002, 12584], 5)

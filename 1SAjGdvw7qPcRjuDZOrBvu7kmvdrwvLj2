@@ -1,0 +1,25 @@
+
+/*
+    10) ​ Crie uma função que verifica se um número inteiro passado como parêmetro é divisível por 3 e retorne true
+    ou false.
+*/
+
+function numeroInteiroDivisivelPorTres(numero){
+    return numero % 3 == 0
+}
+
+console.log(numeroInteiroDivisivelPorTres(3))
+console.log(numeroInteiroDivisivelPorTres(6))
+console.log(numeroInteiroDivisivelPorTres(9))
+console.log(numeroInteiroDivisivelPorTres(12))
+console.log(numeroInteiroDivisivelPorTres(15))
+console.log(numeroInteiroDivisivelPorTres(18))
+console.log(numeroInteiroDivisivelPorTres(21))
+
+console.log(numeroInteiroDivisivelPorTres(4))
+console.log(numeroInteiroDivisivelPorTres(7))
+console.log(numeroInteiroDivisivelPorTres(10))
+console.log(numeroInteiroDivisivelPorTres(13))
+console.log(numeroInteiroDivisivelPorTres(17))
+console.log(numeroInteiroDivisivelPorTres(19))
+console.log(numeroInteiroDivisivelPorTres(20))

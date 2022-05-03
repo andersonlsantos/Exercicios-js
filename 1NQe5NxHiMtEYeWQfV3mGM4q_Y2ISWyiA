@@ -1,0 +1,32 @@
+
+/*
+    11) ​As regras para o cálculo dos anos bissextos são as seguintes:
+        De 4 em 4 anos é ano bissexto;
+        De 100 em 100 anos não é ano bissexto;
+        De 400 em 400 anos é ano bissexto;
+        Prevalecem as últimas regras sobre as primeiras.
+        Partindo daí elabore uma função que recebe um ano e calcula se ele é ano bissexto, imprimindo no console a
+        mensagem e retornando true ou false.
+*/
+
+function anoBissexto(ano){
+    let bissexto = ano % 4 == 0 
+    return bissexto
+}
+
+console.log(anoBissexto(1988))
+console.log(anoBissexto(1992))
+console.log(anoBissexto(1996))
+console.log(anoBissexto(2000))
+console.log(anoBissexto(2004))
+console.log(anoBissexto(2008))
+console.log(anoBissexto(2012))
+
+console.log(anoBissexto(1889))
+console.log(anoBissexto(1994))
+console.log(anoBissexto(1997))
+console.log(anoBissexto(2002))
+console.log(anoBissexto(2005))
+console.log(anoBissexto(2010))
+console.log(anoBissexto(2011))
+

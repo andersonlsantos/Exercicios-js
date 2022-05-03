@@ -1,0 +1,19 @@
+
+/*
+    Escreva uma função que receba dois parâmetros. O primeiro parâmetro é o elemento que repetirá, enquanto
+    que o segundo será o número de vezes que haverá repetição. Um array será retornado.
+    Exemplos:
+    repetir("código", 2) // retornará ["código", "código"]
+    repetir(7, 3) // retornará [7, 7, 7]
+*/
+
+function repetir(elemento, numero){
+    let lista = []
+    for(let i = 1; i <= numero; i++){
+        lista.push(elemento)
+    }
+    console.log(lista)
+}
+
+repetir("código", 2)
+repetir(7, 3)

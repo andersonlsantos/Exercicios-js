@@ -1,0 +1,24 @@
+
+/*
+    Criar uma função que receba uma string como parâmetro e conte quantas palavras tem nela.
+    Considere que todas as palavras só são separadas por um espaço.
+    Exemplos:
+    contarPalavras("Sou uma frase") // retornará 3
+    contarPalavras("Me divirto aprendendo a programar") // retornará 5
+*/
+
+function contarPalavras(frase){
+    let lista = frase.split(' ')
+    let cont = 0
+    for(let i = 0; i < lista.length; i++){
+        if(isNaN(lista[i])){
+            cont += 1
+        }
+    }
+    console.log(cont)
+}
+
+contarPalavras("Sou uma frase")
+contarPalavras("Me divirto aprendendo a programar")
+contarPalavras('Aqui estão 4 maneiras de dividir uma palavra em uma série de caracteres')
+

@@ -1,0 +1,29 @@
+
+/*
+    Crie uma função que recebe um array de números e retorna o segundo maior número presente nesse array.
+    Exemplos:
+    segundoMaior([12, 16, 1, 5]) // retornará 12
+    segundoMaior([8, 4, 5, 6]) // retornará 6
+*/
+
+function segundoMaior(lista){
+    let maior = 0
+    for(let i = 0; i < lista.length; i++){
+        if(lista[i] > maior){
+            maior = lista[i]
+        }
+    }
+    let maior2 = 0
+    for(let e = 0; e < lista.length; e++){
+        if(lista[e] !== maior){
+            if(lista[e] > maior2){
+                maior2 = lista[e]
+            }
+        }
+    }
+    console.log(maior2)
+}
+
+segundoMaior([12, 16, 1, 5])
+segundoMaior([8, 4, 5, 6])
+segundoMaior([1, 5, 8, 7, 74, 9, 563, 123, 741])

@@ -1,0 +1,42 @@
+
+/*
+    A fim de criar um mecanismo de busca para sua aplicação, você precisa iniciar criando uma função para
+    identificar palavras semelhantes.
+    Escreva uma função que recebe como primeiro parâmetro uma palavra e, como segundo parâmetro, um array
+    de strings. A função deverá filtrar as palavras do array que contêm nelas a string do primeiro parâmetro.
+    Exemplos:
+    buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"]) // retornará ["programação", "profissional"]
+    buscarPalavrasSemelhantes("python", ["javascript", "java", "c++"]) // retornará []
+*/
+
+function buscarPalavrasSemelhantes(palavraBusca, lista){
+    let palavraLista = []
+    let indiceLista = []
+    let cont = 0
+    for(let i = 0; i < lista.length; i++){
+        for(let e = 0; e < palavraBusca.length; e++){
+            if(lista[i][e] === palavraBusca[e]){
+                cont += palavraBusca.length + 1
+                //console.log(`${lista[i][e]} - ${palavraBusca[e]} - ${lista[i]} - ${i} - ${e}`)
+                palavraLista.push(lista[i])
+                indiceLista.push(cont)
+            }
+        }
+    }
+    indiceLista.unshift(1)
+    //console.log(indiceLista, palavraLista)
+
+    let palavraListaConclusao = []
+    for(let a = 0; a < indiceLista.length; a++){
+        //console.log(`${palavraLista[indiceLista[a]]}`)
+        if(palavraLista[indiceLista[a]] !== undefined){
+            //console.log(`${palavraLista[indiceLista[a]]}`)
+            palavraListaConclusao.push(palavraLista[indiceLista[a]])
+        }
+    }
+    console.log(palavraListaConclusao)
+}
+
+buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional", "casa", "proativo", "carro", "caminhão", "programação", "pro"])
+buscarPalavrasSemelhantes("python", ["javascript", "java", "c++"])
+buscarPalavrasSemelhantes("programaçãodão", ["javascript", "java", "c++", "programaçãodão", "programaçãodãodam", "python", "php", "programaçãodãorão", "c", "carro", "moto", "trem bala", "cidade", "programaçãodãodamdam"])

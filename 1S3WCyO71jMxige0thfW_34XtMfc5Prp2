@@ -1,0 +1,75 @@
+/*
+    13) ​ Crie um programa que exibe se um dia é dia útil, fim de semana ou dia inválido dado o número referente ao
+    dia. Considere que domingo é o dia 1 e sábado é o dia 7. Utilize a estrutura Switch.
+*/
+
+const diaUtil = (d, mes) => {
+    let dia
+    if(mes == 1){
+       switch(d){
+           case 1:
+               dia = 'Feriado: Dia da Confraternização Universal'
+               break
+            case 2:
+                dia = 'Sabado'
+                break
+            case 3:
+                dia = 'Domingo'
+                break
+            case 4: case 5: case 6: case 7: case 8:
+                dia = 'Dia Util'
+                break
+            case 9:
+                dia = 'Sabado'
+                break
+            case 10:
+                dia = 'Domingo'
+                break
+            case 11: case 12: case 13: case 14: case 15:
+                dia = 'Dia Util'
+                break
+            case 16:
+                dia = 'Sabado'
+                break
+            case 17:
+                dia = 'Domingo'
+                break
+            case 18: case 19: case 20: case 21: case 22:
+                dia = 'Dia Util'
+                break
+            case 23:
+                dia = 'Sabado'
+                break
+            case 24:
+                dia = 'Domingo'
+                break
+            case 25: case 26: case 27: case 28: case 29:
+                dia = 'Dia Util'
+                break
+            case 30:
+                dia = 'Sabado'
+                break
+            case 31:
+                dia = 'Domingo'
+                break
+            default:
+                dia = 'Opção invalida o mes de Janeiro tem 31 dias'
+       }
+   }
+   return dia
+}
+
+//console.log(diaUtil(31, 1))
+
+let lista = []
+
+for(let i = 1; i <= 31; i++){
+    lista.push(i)
+    if(i == 4){
+        console.log('Segunda')
+    }else if(i == 5){
+        console.log('terça')
+    }
+}
+
+console.log(lista)

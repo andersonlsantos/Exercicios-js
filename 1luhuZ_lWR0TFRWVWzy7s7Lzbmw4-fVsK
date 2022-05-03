@@ -1,0 +1,35 @@
+
+/*
+    Escreva um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e mostre:
+    a) a área do triângulo retângulo que tem A por base e C por altura.
+    b) a área do círculo de raio C. (pi = 3.14159)
+    c) a área do trapézio que tem A e B por bases e C por altura.
+    d) a área do quadrado que tem lado B.
+    e) a área do retângulo que tem lados A e B.
+*/
+
+function elevado(base, elevado){
+    let acumulador = 1
+    for(let i = 1; i <= elevado; i++){
+        acumulador *= base
+    }
+    return acumulador
+}
+
+const variosCalculos = (a, b, c) => {
+    let pi = 3.14159
+    let triagulo = (a * c) / 2
+    let circulo = pi * elevado(c, 2)
+    let trapezio = ((a + b) * c) / 2
+    let quadrado = elevado(b, 2)
+    let retangulo = a * b
+    console.log(`triangulo: ${triagulo.toFixed(3)}
+circulo: ${circulo.toFixed(3)}
+trapézio: ${trapezio.toFixed(3)}
+quadrado: ${quadrado.toFixed(3)}
+retângulo: ${retangulo.toFixed(3)}`)
+}
+
+variosCalculos(3.0, 4.0, 5.2)
+console.log('----------------')
+variosCalculos(12.7, 10.4, 15.2)

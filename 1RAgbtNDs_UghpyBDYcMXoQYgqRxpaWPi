@@ -1,0 +1,67 @@
+
+/*
+    34)​ Construa uma função que receberá duas Strings de tamanhos variados e que retornará True ou False caso
+        todos os caracteres (independentemente de ser maiúsculo ou minúsculo) estejam contidos em ambas palavras.
+*/
+
+function mesmosCaracteres(palavra1, palavra2){
+    let string1 = palavra1.toLowerCase().split('')
+    let string2 = palavra2.toLowerCase().split('')
+    let palavra3 = []
+    for(let i = 0; i < string1.length; i++){
+        //console.log(palavra1.toLowerCase().split('')[i])
+        for(let f = 0; f < string2.length; f++){
+            if(string1[i] == string2[f]){
+                palavra3.push(string1[i])
+            }
+        }
+    }
+    let palavra4
+    for(let e = 0; e < palavra3.length; e++){
+        /*if(palavra3[e] !== palavra3[e + 1]){
+            palavra4.push(palavra3[e])
+        }*/
+        if(palavra3[e] === palavra3[e + 1]){
+            delete palavra3[e]
+        }
+
+        if(palavra3[e] === palavra3[e + 2]){
+            delete palavra3[e]
+        }
+
+        if(palavra3[e] === palavra3[e + 3]){
+            delete palavra3[e]
+        }
+
+        if(palavra3[e] === palavra3[e + 4]){
+            delete palavra3[e]
+        }
+
+        if(palavra3[e] === palavra3[e + 5]){
+            delete palavra3[e]
+        }
+
+        //--
+
+        if(palavra3[e] === palavra3[e + 6]){
+            delete palavra3[e]
+        }
+
+        if(palavra3[e] === palavra3[e + 7]){
+            delete palavra3[e]
+        }
+
+        if(palavra3[e] === palavra3[e + 8]){
+            delete palavra3[e]
+        }
+
+        if(palavra3[e] === palavra3[e + 9]){
+            delete palavra3[e]
+        }
+    }
+    
+    return `Os nomes ${palavra1} e ${palavra2} tem essas letras em comun = "${palavra3.join('')}"`
+}
+
+
+console.log(mesmosCaracteres('Amanda', 'Anderson'))

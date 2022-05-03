@@ -1,0 +1,31 @@
+
+/*
+    Desenvolva uma função que recebe um caractere e uma string como parâmetros e retorne a quantidade de
+    vezes que o caractere se repete na string. A função deverá ser case-sensitive, ou seja, irá diferenciar
+    maiúsculas de minúsculas.
+    Exemplos:
+    contarCaractere("r", "A sorte favorece os audazes") // retornará 2
+    contarCaractere("c", "Conhece-te a ti mesmo") // retornará 1
+*/
+
+function contarCaractere(caracter, frase){
+    let fraseSemEspaco = frase.replace(/ /g, '')
+    let lista = fraseSemEspaco.split('')
+    let contarCaracter = 0
+    for(let i = 0; i < lista.length; i++){
+        if(caracter === lista[i] && caracter.toUpperCase() === caracter){
+            contarCaracter += 1
+        }
+        if(caracter === lista[i] && caracter.toLowerCase() === caracter){
+            contarCaracter += 1
+        }
+    }
+    console.log(contarCaracter)
+}
+
+contarCaractere("r", "A sorte favorece os audazes")
+contarCaractere("c", "Conhece-te a ti mesmo")
+contarCaractere("e", "Conhece-te a ti mesmo")
+contarCaractere("A", "A sorte favorece os audazes")
+contarCaractere("s", "A sorte favorece os audazes")
+contarCaractere('e', 'Estamos convertendo nossos dados de compatibilidade para o formato JSON. Esta tabela de compatibilidade ainda usa o formato antigo, pois ainda não convertemos os dados que ela contém. Descubra como você pode ajudar! (en-US)')

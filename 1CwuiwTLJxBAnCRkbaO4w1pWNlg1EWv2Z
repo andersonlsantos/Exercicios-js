@@ -1,0 +1,24 @@
+
+/*
+    Criar uma função que receba um array de números e retorne o menor número desse array.
+    Exemplos:
+    menorNumero([10, 5, 35, 65]) // retornará 5
+    menorNumero([5, -15, 50, 3]) // retornará -15
+*/
+
+function menorNumero(lista){
+    let menor = 0
+    for(let i = 0; i < lista.length; i++){
+        menor += lista[i]
+    }
+    for(let e = 0; e < lista.length; e++){
+        if(lista[e] <= menor){
+            menor = lista[e]
+        }
+    }
+    console.log(menor)
+}
+
+menorNumero([10, 5, 35, 65])
+menorNumero([5, -15, 50, 3])
+menorNumero([8, 9, 12, 45, 96, 1, 0, 85, -5, -45, -1])

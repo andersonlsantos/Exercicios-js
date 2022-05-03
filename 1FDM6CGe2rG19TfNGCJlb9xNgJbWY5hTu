@@ -1,0 +1,39 @@
+
+/*
+    Desenvolva uma função que receba uma string como parâmetro e retorne essa string somente com as
+    consoantes, ou seja, sem as vogais.
+    Exemplos:
+    removerVogais("Cod3r") // retornará "Cd3r"
+    removerVogais("Fundamentos") // retornará "Fndmnts"
+*/
+
+function removerVogais(palavra){
+    let list = []
+    let palavra2 = palavra.toLowerCase()
+    for(let i = 0; i < palavra.length; i++){
+        if(palavra2[i] !== 'a' && palavra2[i] !== 'e' && palavra2[i] !== 'i' && palavra2[i] !== 'o' && palavra2[i] !== 'u'){
+            list.push(palavra[i])
+        }
+    }
+    //console.log(list)
+    let palavra3 = ''
+    for(let e = 0; e < list.length; e++){
+        //palavra3 += list[e]
+        //if(list[e] == ' '){
+        //    console.log(e, list[e])
+        //}
+        if(list[e] == ' ' && list[e - 1] == ' '){
+            delete list[e]
+        }
+    }
+    for(let a = 0; a < list.length; a++){
+        if(list[a] !== undefined){
+            palavra3 += list[a]
+        }
+    }
+    console.log(palavra3)
+}
+
+removerVogais("Cod3r")
+removerVogais("Fundamentos")
+removerVogais('Anderson Ama A Amanda')

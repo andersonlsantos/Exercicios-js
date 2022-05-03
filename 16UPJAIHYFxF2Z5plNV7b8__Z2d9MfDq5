@@ -1,0 +1,13 @@
+
+/*
+    31) ​ Escrever um algoritmo que percorre um vetor de inteiros, conta quantos números negativos há nesse vetor
+         e imprime a quantidade no console.
+*/
+
+function numeroNegativo(...vetor){
+    for(let i = 0; i < vetor.filter(n => n < 0).length; i++){
+        console.log(vetor.filter(n => n < 0)[i])
+    }
+}
+
+numeroNegativo(1, -8, 7, 5, -96, 48, -89, 12, 25, -52, 15, -47, -456, 63, 12, 74, 745, 58, -45, -47)

@@ -1,0 +1,38 @@
+
+/*
+    37) ​ Escreva duas funções, uma para progressão aritmética e uma para progressão geométrica que recebam
+         como parâmetros um número n (número de termo), ​ a1 ​ (o primeiro termo) e ​ r ​ (a razão) e escreva os ​ n ​ termos ,
+         bem como a soma dos elementos.
+*/
+
+const elevado = (base, numElevado) => {
+    let acumulador = 1
+    for(let i = 1; i <= numElevado; i++){
+        acumulador *= base
+    }
+    return acumulador
+}
+
+const progressaoAritimetica = (numeroDeTermo, primeiroTermo, razao) => {
+    let quantidadeDeTermosPA = (numeroDeTermo - (primeiroTermo - razao)) / razao
+    let pa = ((primeiroTermo + numeroDeTermo) * quantidadeDeTermosPA) / 2
+    for(let i = primeiroTermo; i <= numeroDeTermo; i += razao){
+        console.log(i)
+    }
+    console.log(`Soma dos termos da PA = ${pa}`)
+}
+
+const progrecaoGeometrica = (numeroDeTermo, primeiroTermo, razao) => {
+    let acumulador
+    for(let i = 1; i <= numeroDeTermo; i++){
+        acumulador = i * razao
+        console.log(acumulador)
+    }
+    let primeiraparte = primeiroTermo * (elevado(razao, numeroDeTermo) - 1)
+    let pg = primeiraparte / (razao - 1)
+    console.log(`Soma dos termos da PG = ${pg}`)
+}
+
+progressaoAritimetica(160, 15, 5)
+
+progrecaoGeometrica(5, 1, 3)

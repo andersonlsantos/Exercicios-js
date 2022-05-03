@@ -1,0 +1,217 @@
+
+/*
+    20)​ Crie um programa para informar quais e quantas notas são necessárias para entregar o mínimo de cédulas
+        para um determinado valor informado pelo usuário considerando notas de R$ 100, R$ 50, R$ 10 e R$ 5 e R$ 1.
+        Seu programa deve mostrar apenas as notas utilizadas. Por exemplo, ao solicitar R$18, o programa deve
+        informar apenas a seguinte informação (note que não foram exibidas informações sobre as demais cédulas): 1
+        nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1.
+*/
+
+let troco = a => {
+    if(a >= 100){
+
+        let b
+        let c
+        let d
+        let e
+        let f
+
+        b = parseInt(a / 100)
+        let resultado = a % 100
+        let resultado2 = resultado 
+        let resultado3 = resultado2 % 10
+        let resultado4 = resultado3 - 5
+
+        //console.log(parseInt(resultado2))
+        
+        if(resultado >= 50){
+            c = parseInt(resultado / 50)
+        }else{
+            c = 0
+        }
+
+        if(resultado2 >= 10){
+            if(resultado2 > 50){
+                d = parseInt((resultado2 - 50) / 10)
+            }else{
+                d = parseInt(resultado2 / 10)
+            }
+        }else{
+            d = 0
+        }
+
+        if(resultado3 >= 5){
+            e = parseInt(resultado3 / 5)
+        }else{
+            e = 0
+        }
+
+        if(resultado3 > 5){
+            f = resultado3 - 5
+        }else if(resultado3 < 5){
+            f = resultado3
+        }else{
+            f = 0
+        }
+
+        //console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${c} notas de R$50,00, ${d} notas de R$10,00, ${e} notas de R$5,00 e ${f} notas de R$1,00`)
+        
+        if(b > 0 && c > 00 && d > 0 && e > 0 && f > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${c} notas de R$50,00, ${d} notas de R$10,00, ${e} notas de R$5,00 e ${f} notas de R$1,00`)
+
+        }else if(b > 0 && c > 00 && d > 0 && e > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${c} notas de R$50,00, ${d} notas de R$10,00 e ${e} notas de R$5,00`)
+
+        }else if(b > 0 && c > 00 && d > 0 && f > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${c} notas de R$50,00, ${d} notas de R$10,00 e ${f} notas de R$1,00`)
+
+        }else if (b > 0 && c > 00 &&  e > 0 && f > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${c} notas de R$50,00, ${e} notas de R$5,00 e ${f} notas de R$1,00`)
+
+        }else if(b > 0 && c > 00 &&  e > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${c} notas de R$50,00 e ${e} notas de R$5,00`)
+
+        }else if(b > 0 && c > 00 &&  f > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${c} notas de R$50,00 e ${f} notas de R$1,00`)
+
+        }else if(b > 0 && c > 00){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00 e ${c} notas de R$50,00`)
+
+        }else if(b > 0 && d > 0 && e > 0 && f > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${d} notas de R$10,00, ${e} notas de R$5,00 e ${f} notas de R$1,00`)
+
+        }else if(b > 0 && d > 0 && e > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${d} notas de R$10,00 e ${e} notas de R$5,00`)
+
+        }else if(b > 0 && d > 0 && f > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00, ${d} notas de R$10,00 e ${f} notas de R$1,00`)
+
+        }else if(b > 0 && d > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00 e ${d} notas de R$10,00`)
+
+        }else if(b > 0 && f > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00 e ${f} notas de R$1,00`)
+
+        }else{
+
+            console.log(`R$${a.toFixed(2)} = ${b} notas de R$100,00`)
+
+        }
+        
+        
+    }else{
+        console.log(`total = ${a}`) // continuamos aqui 
+
+        let inteiro = parseInt(a / 10) * 10
+
+        let umReal = a % inteiro
+
+        let umReal2 = a >= 9 ? umReal : a
+
+        let umReal3 = a == 9 ? 9 : umReal2
+
+        let umReal4 = umReal3 < 5 ? umReal3 : umReal3 - 5
+
+        console.log(`notas de um real = ${umReal4}`)
+        //------------------------------------------------------
+
+        let cincoReais = a % inteiro
+
+        let cincoReais2 = cincoReais >= 5 ? 1 : 0
+
+        let cincoReais3 = a > 10 ? cincoReais2 : a >= 5 ? 1 : 0
+
+        let cincoReais4 = a == 10 ? 0 : cincoReais3
+        
+        console.log(`notas de 5 reais = ${cincoReais4}`)
+
+        //------------------------------------------------------
+
+        let dezReais = parseInt(a / 10)
+
+        let dezReais2 = dezReais < 5 ? dezReais: dezReais - 5
+
+        console.log(`notas de 10 reais = ${dezReais2}`)
+        //------------------------------------------------------
+
+        let ciquentaReias = a >= 50 ? 1 : 0
+
+        console.log(`notas de 50 reais = ${ciquentaReias}`)
+        //------------------------------------------------------
+
+        /*if(umReal4 > 0 && cincoReais4 == 0 && dezReais2 == 0 && ciquentaReias == 0){
+
+            console.log(`R$${a.toFixed(2)} = ${umReal4} notas de R$1,00`)
+
+        }else if(umReal4 > 0 && cincoReais4 > 0 && dezReais2 == 0 && ciquentaReias == 0){
+
+            console.log(`R$${a.toFixed(2)} = ${umReal4} notas de R$1,00 e ${cincoReais4} notas de R$5,00`)
+
+        }else if(umReal4 > 0 && cincoReais4 > 0 && dezReais2 > 0 && ciquentaReias == 0){
+
+            console.log(`R$${a.toFixed(2)} = ${umReal4} notas de R$1,00, ${cincoReais4} notas de R$5,00 e ${dezReais2} notas de R$10,00`)
+
+        }else if(umReal4 > 0 && cincoReais4 > 0 && dezReais2 > 0 && ciquentaReias > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${umReal4} notas de R$1,00, ${cincoReais4} notas de R$5,00, ${dezReais2} notas de R$10,00 e ${ciquentaReias} notas de R$50,00`)
+
+        }else if(umReal4 == 0 && cincoReais4 > 0 && dezReais2 == 0 && ciquentaReias == 0){
+
+            console.log(`R$${a.toFixed(2)} = ${cincoReais4} notas de R$5,00`)
+
+        }else if(umReal4 == 0 && cincoReais4 == 0 && dezReais2 > 0 && ciquentaReias == 0){
+
+            console.log(`R$${a.toFixed(2)} = ${dezReais2} notas de R$10,00`)
+
+        }else if(umReal4 > 0 && cincoReais4 == 0 && dezReais2 > 0 && ciquentaReias == 0){
+
+            console.log(`R$${a.toFixed(2)} = ${dezReais2} notas de R$10,00 e ${umReal4} notas de R$1,00`)
+
+        }else if(umReal4 == 0 && cincoReais4 > 0 && dezReais2 > 0 && ciquentaReias == 0){
+
+            console.log(`R$${a.toFixed(2)} = ${dezReais2} notas de R$10,00 e ${cincoReais4} notas de R$5,00`)
+
+        }else if(umReal4 > 0 && cincoReais4 > 0 && dezReais2 > 0 && ciquentaReias == 0){
+
+            console.log(`R$${a.toFixed(2)} = ${dezReais2} notas de R$10,00, ${cincoReais4} notas de R$5,00 e ${umReal4} notas de R$1,00`)
+
+        }else if(umReal4 == 0 && cincoReais4 == 0 && dezReais2 == 0 && ciquentaReias > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${ciquentaReias} notas de R$50,00`)
+
+        }else if(umReal4 > 0 && cincoReais4 == 0 && dezReais2 == 0 && ciquentaReias > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${ciquentaReias} notas de R$50,00 e ${umReal4} notas de R$1,00`)
+
+        }else if(umReal4 > 0 && cincoReais4 > 0 && dezReais2 == 0 && ciquentaReias > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${ciquentaReias} notas de R$50,00, ${umReal4} notas de R$1,00 e ${cincoReais4} notas de R$5,00`)
+
+        }else if(umReal4 == 0 && cincoReais4 == 0 && dezReais2 > 0 && ciquentaReias > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${ciquentaReias} notas de R$50,00 e ${dezReais2} notas de R$10,00`)
+
+        }else if(umReal4 == 0 && cincoReais4 > 0 && dezReais2 > 0 && ciquentaReias > 0){
+
+            console.log(`R$${a.toFixed(2)} = ${ciquentaReias} notas de R$50,00, ${dezReais2} notas de R$10,00 e ${cincoReais4} notas de R$5,00`)
+        }*/
+    
+    }
+    
+}
+
+//console.log(85 % 10)
+
+troco(55)

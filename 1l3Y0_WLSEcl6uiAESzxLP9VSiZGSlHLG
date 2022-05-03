@@ -1,0 +1,50 @@
+
+/*
+    27)​ Construa uma função que receba como parâmetros as alturas e as taxas de crescimento anuais de duas
+        crianças e calcule se existe uma criança menor, caso exista se a criança menor ultrapassará a maior e em
+        quantos anos isso acontecerá. Utilize centímetros para as unidades de medida.
+*/
+
+const taxaCrecimentoCrianca = (alturaCricimentoA, taxaCrecimentoA, alturaCricimentoB, taxaCrecimentoB) => {
+    
+    let crincaMaior 
+    let criancaMenor
+    let taxaCrecimentoMaior
+    let taxaCrecimentoMenor
+    let media
+    let cont
+    let conclucao
+
+    if(alturaCricimentoA > alturaCricimentoB){
+        crincaMaior = alturaCricimentoA
+        criancaMenor = alturaCricimentoB
+        taxaCrecimentoMaior = taxaCrecimentoA
+        taxaCrecimentoMenor = taxaCrecimentoB
+    }else{
+        crincaMaior = alturaCricimentoB
+        criancaMenor = alturaCricimentoA
+        taxaCrecimentoMaior = taxaCrecimentoB
+        taxaCrecimentoMenor = taxaCrecimentoA
+    }
+
+    media = (taxaCrecimentoMenor / 100) * criancaMenor
+    //console.log(media)
+
+    /*for(let i = taxaCrecimentoMenor; i <= crincaMaior - criancaMenor; i++){
+        //console.log(i)
+        conte += i
+        cont += 1
+        console.log(i)
+    }*/
+
+    cont = (crincaMaior - criancaMenor) / taxaCrecimentoMenor
+    
+    conclucao = `A criança maior tem ${crincaMaior}cm, a criança menor tem ${criancaMenor}cm.
+A criança menor vai levar ${cont} anos para ficar no tamanho da criaça maior.`
+
+    console.log(conclucao)
+
+}
+
+taxaCrecimentoCrianca(150, 4, 145, 5)
+

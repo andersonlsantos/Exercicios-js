@@ -1,0 +1,72 @@
+
+/*
+    Leia um valor inteiro. A seguir, calcule o menor número de notas possíveis (cédulas) no qual o valor 
+    pode ser decomposto. As notas consideradas são de 100, 50, 20, 10, 5, 2 e 1. A seguir mostre o valor 
+    lido e a relação de notas necessárias.
+*/
+
+function cedulas(valor){
+    console.log(`R$${valor.toFixed(2)}`)
+    let valorAtual = valor
+    let cemReai = 0
+    let cinquentaReais = 0
+    let vinteReais = 0
+    let dezReais = 0
+    let cincoReais = 0
+    let doisReais = 0
+
+    if(valor / 100 <= 9.99 && valor / 100 > 0.99){
+        cemReai = valor / 100
+        cemReai = parseInt(cemReai)
+        valorAtual = valor - (cemReai * 100)
+    }
+    console.log(`${cemReai} nota(s) de R$ 100,00`)
+    //console.log(valorAtual)
+    
+    if(valorAtual / 50 > 0.98 && valorAtual / 50 < 2.02){
+        cinquentaReais = valorAtual / 50
+        cinquentaReais = parseInt(cinquentaReais)
+        valorAtual = valorAtual - (cinquentaReais * 50)
+    }
+    console.log(`${cinquentaReais} nota(s) de R$ 50,00`)
+    //console.log(valorAtual)
+
+    if(valorAtual / 20 >= 1 && valorAtual / 20 <= 2.45){
+        vinteReais = valorAtual / 20
+        vinteReais = parseInt(vinteReais)
+        valorAtual = valorAtual - (vinteReais * 20)
+    }
+    console.log(`${vinteReais} nota(s) de R$ 20,00`)
+    //console.log(valorAtual)
+
+    if(valorAtual / 10 >= 1 && valorAtual <= 19){
+        dezReais = valorAtual / 10
+        dezReais = parseInt(dezReais)
+        valorAtual = valorAtual - (dezReais * 10)
+    }
+    console.log(`${dezReais} nota(s) de R$ 10,00`)
+    //console.log(valorAtual)
+
+    if(valorAtual / 5 >= 1 && valorAtual / 5 <= 1.8){
+        cincoReais = valorAtual / 5
+        cincoReais = parseInt(cincoReais)
+        valorAtual = valorAtual - (cincoReais * 5)
+    }
+    console.log(`${cincoReais} nota(s) de R$ 5,00`)
+    //console.log(valorAtual)
+
+    if(valorAtual / 2 >= 1 && valorAtual / 2 <= 2){
+        doisReais = valorAtual / 2
+        doisReais = parseInt(doisReais)
+        valorAtual = valorAtual - (doisReais * 2)
+    }
+    console.log(`${doisReais} nota(s) de R$ 2,00`)
+    //console.log(valorAtual)
+
+    console.log(`${valorAtual} nota(s) de R$ 1,00`)
+}
+
+cedulas(178)
+
+//console.log(4 / 2)
+
